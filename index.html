@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathanael · Promotion Strategy 2025–2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Syne:wght@400;500;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0c0f14;
+  --surface: #131820;
+  --border: #1e2530;
+  --gold: #c8a96e;
+  --gold-dim: #8a7148;
+  --teal: #3d9e8c;
+  --red: #c05e4a;
+  --text: #d8d0c4;
+  --muted: #5a6070;
+  --bright: #f0ead8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+.hero-inner { position: relative; max-width: 900px; margin: 0 auto; }
+.hero-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--bright);
+  max-width: 640px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-sub {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  max-width: 480px;
+  line-height: 1.7;
+}
+.hero-tags {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--muted);
+}
+.tag.hi { border-color: var(--gold-dim); color: var(--gold); }
+.tag.warn { border-color: #5a3a2e; color: var(--red); }
+
+/* ── LAYOUT ── */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+.section { margin-bottom: 3.5rem; }
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.section-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--border);
+  line-height: 1;
+  user-select: none;
+}
+.section-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.section-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+/* ── VERDICT BANNER ── */
+.verdict-banner {
+  background: linear-gradient(135deg, #1a1208 0%, #0f1a18 100%);
+  border: 1px solid var(--gold-dim);
+  border-radius: 6px;
+  padding: 1.75rem;
+  margin-bottom: 3.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.verdict-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.verdict-banner h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.verdict-banner p {
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+.verdict-banner strong { color: var(--bright); }
+
+/* ── SIGNAL BARS ── */
+.signals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+.signal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+}
+.signal-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+.signal-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.signal-value.green { color: var(--teal); }
+.signal-value.gold  { color: var(--gold); }
+.signal-value.red   { color: var(--red); }
+.signal-bar {
+  height: 3px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+.signal-fill {
+  height: 100%;
+  border-radius: 99px;
+  width: 0;
+  transition: width 1.4s cubic-bezier(.4,0,.2,1);
+}
+.signal-fill.green { background: var(--teal); }
+.signal-fill.gold  { background: var(--gold); }
+.signal-fill.red   { background: var(--red); }
+.signal-note { font-size: 0.76rem; color: var(--muted); line-height: 1.5; }
+
+/* ── STRENGTHS GRID ── */
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.strength-cell {
+  background: var(--surface);
+  padding: 1.1rem 1.25rem;
+  transition: background 0.2s;
+}
+.strength-cell:hover { background: #1a2030; }
+.strength-cell .s-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--border);
+  line-height: 1;
+}
+.strength-cell .s-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bright);
+  margin: 0.2rem 0;
+}
+.strength-cell .s-domain {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.strength-cell .s-insight {
+  font-size: 0.74rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  line-height: 1.45;
+  display: none;
+}
+.strength-cell:hover .s-insight { display: block; }
+.domain-exec { border-left: 2px solid var(--teal); }
+.domain-rel  { border-left: 2px solid var(--gold); }
+.domain-strat{ border-left: 2px solid #7a6eaa; }
+.domain-inf  { border-left: 2px solid var(--red); }
+
+/* ── GAP TABLE ── */
+.gap-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.gap-table th {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: 0 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.gap-table tr + tr td { border-top: 1px solid var(--border); }
+.gap-table td {
+  padding: 1rem 1rem 1rem 0;
+  font-size: 0.82rem;
+  vertical-align: top;
+}
+.gap-table td:first-child {
+  font-weight: 500;
+  color: var(--bright);
+  width: 200px;
+}
+.gap-table td:nth-child(2) { color: var(--muted); }
+.gap-table td:last-child {
+  color: var(--teal);
+  font-size: 0.78rem;
+}
+.gap-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 99px;
+  margin-bottom: 0.3rem;
+}
+.gap-badge.critical { background: #2a1810; color: var(--red); border: 1px solid #5a2e20; }
+.gap-badge.high     { background: #1a1810; color: var(--gold); border: 1px solid var(--gold-dim); }
+
+/* ── TIMELINE ── */
+.tl {
+  position: relative;
+  padding-left: 2.5rem;
+}
+.tl::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 8px; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.tl-item.visible { opacity: 1; transform: none; }
+.tl-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 5px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem;
+}
+.tl-dot.now   { border-color: var(--teal); color: var(--teal); }
+.tl-dot.soon  { border-color: var(--gold); color: var(--gold); }
+.tl-dot.later { border-color: var(--muted); color: var(--muted); }
+.tl-phase {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.tl-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--bright);
+  margin-bottom: 0.4rem;
+}
+.tl-body { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.tl-body ul { padding-left: 1rem; margin-top: 0.35rem; }
+.tl-body li { margin-bottom: 0.2rem; }
+.tl-body strong { color: var(--text); }
+
+/* ── CHECKLIST ── */
+.cl-group { margin-bottom: 1.5rem; }
+.cl-group-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  user-select: none;
+}
+.cl-group-head h3 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bright);
+  letter-spacing: 0.04em;
+}
+.cl-badge {
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+.cl-items { border: 1px solid var(--border); border-top: none; border-radius: 0 0 4px 4px; }
+.cl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.7rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid var(--border);
+}
+.cl-item:last-child { border-bottom: none; }
+.cl-item:hover { background: #1a2030; }
+.cl-box {
+  width: 16px; height: 16px;
+  border: 1px solid var(--muted);
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+  font-size: 0.65rem;
+}
+.cl-item.done .cl-box {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+.cl-item.done .cl-box::after { content: '✓'; }
+.cl-item.done .cl-text { opacity: 0.35; text-decoration: line-through; }
+.cl-text { font-size: 0.8rem; line-height: 1.5; color: var(--text); }
+.cl-text .why { display: block; font-size: 0.72rem; color: var(--muted); margin-top: 0.15rem; font-style: italic; }
+.cl-text .strength-link { color: var(--gold); font-size: 0.7rem; }
+
+/* ── SCORE ── */
+.score-bar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+}
+.score-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.score-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+.score-msg {
+  font-size: 0.82rem;
+  color: var(--text);
+  margin-top: 0.75rem;
+}
+
+/* ── DESIGNATION BOX ── */
+.designation-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.desig-cell {
+  background: var(--surface);
+  padding: 1.25rem;
+}
+.desig-cell.highlight { background: #0e1f1b; }
+.desig-name {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+.desig-name.green { color: var(--teal); }
+.desig-check {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.desig-check li { list-style: none; padding-left: 1.2rem; position: relative; margin-bottom: 0.2rem; }
+.desig-check li::before { content: '·'; position: absolute; left: 0; color: var(--border); }
+.desig-check li.met::before { content: '✓'; color: var(--teal); }
+.desig-check li.gap::before { content: '○'; color: var(--gold); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-inner > * {
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+.hero-eyebrow { animation-delay: 0.1s; }
+.hero h1      { animation-delay: 0.2s; }
+.hero-sub     { animation-delay: 0.3s; }
+.hero-tags    { animation-delay: 0.4s; }
+
+@media (max-width: 600px) {
+  .signals { grid-template-columns: 1fr; }
+  .designation-row { grid-template-columns: 1fr; }
+  .gap-table td:first-child { width: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Promotion Strategy · Nathanael Png · 2025–2026</div>
+    <h1>You're not too soon.<br>You're <em>under-positioned.</em></h1>
+    <p class="hero-sub">
+      8 years of compound evidence. 3 director-level endorsements. A genuine systems thinker.
+      The question is no longer if — it's how fast you can close the positioning gap.
+    </p>
+    <div class="hero-tags">
+      <span class="tag hi">Hi-Potential Endorsed</span>
+      <span class="tag hi">3 Director Sponsors</span>
+      <span class="tag">Regional IT Ops Manager</span>
+      <span class="tag">Sea Ltd</span>
+      <span class="tag warn">Gap: Executive Influence</span>
+      <span class="tag warn">Gap: Domain Authority</span>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- VERDICT -->
+  <div class="verdict-banner">
+    <div class="verdict-icon">⚡</div>
+    <div>
+      <h2>The honest read on your situation</h2>
+      <p>
+        You are already operating at the next level in most dimensions. You lead a 46-person team, own a USD 27M program, and have been explicitly tagged <strong>Hi-Potential</strong> by three directors including Jason Bay. The "too soon" worry is a <strong>self-perception lag</strong> — your evidence has moved faster than your confidence in making the ask.
+        <br><br>
+        Your real ceiling is not time-in-role. It is two things: <strong>executive communication style</strong> (your reviews say more signal, less detail) and <strong>domain authority positioning</strong> (being <em>the</em> IAM/governance voice at Sea, not just a strong operator). Fix those, and 2026 is yours.
+      </p>
+    </div>
+  </div>
+
+  <!-- SIGNAL BARS -->
+  <div class="signals" id="signals">
+    <div class="signal-card">
+      <div class="signal-label">Delivery Track Record</div>
+      <div class="signal-value green" id="sv0">0%</div>
+      <div class="signal-bar"><div class="signal-fill green" data-target="91" id="sf0"></div></div>
+      <div class="signal-note">27M USD program, 30k users, &lt;2% disruption, 95% asset rate in 6 months. Exceptional.</div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-label">Sponsorship Depth</div>
+      <div class="signal-value gold" id="sv1">0%</div>
+      <div class="signal-bar"><div class="signal-fill gold" data-target="85" id="sf1"></div></div>
+      <div class="signal-note">Joseph, Wee Han, Jason Bay. Three director-level voices — that's rare and powerful.</div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-label">Executive Communication</div>
+      <div class="signal-value red" id="sv2">0%</div>
+      <div class="signal-bar"><div class="signal-fill red" data-target="52" id="sf2"></div></div>
+      <div class="signal-note">Your reviews flagged "more visual, less detail." This is the gap between operator and executive.</div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-label">Domain Authority</div>
+      <div class="signal-value gold" id="sv3">0%</div>
+      <div class="signal-bar"><div class="signal-fill gold" data-target="60" id="sf3"></div></div>
+      <div class="signal-note">Strong internally. Not yet an external/cross-org "recognized name" in IAM. Building.</div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-label">Next-Level Behaviours</div>
+      <div class="signal-value green" id="sv4">0%</div>
+      <div class="signal-bar"><div class="signal-fill green" data-target="78" id="sf4"></div></div>
+      <div class="signal-note">Leading countries, mentoring team, shaping policy — you're already doing next-level work.</div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-label">Life Design Coherence</div>
+      <div class="signal-value green" id="sv5">0%</div>
+      <div class="signal-bar"><div class="signal-fill green" data-target="95" id="sf5"></div></div>
+      <div class="signal-note">2029 gap year funded, faith + family + career integrated. Rare in high-performers.</div>
+    </div>
+  </div>
+
+  <!-- DESIGNATION MAP -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div>
+        <div class="section-title">Sea Designation Framework</div>
+        <div class="section-desc">Where you sit — and what moves the needle</div>
+      </div>
+    </div>
+
+    <div class="designation-row">
+      <div class="desig-cell">
+        <div class="desig-name">Promotable</div>
+        <ul class="desig-check">
+          <li class="met">Satisfactory performance (B+)</li>
+          <li class="met">Could move up within 1–2 years</li>
+          <li class="gap">Additional skills for acceleration</li>
+          <li class="met">Career path in current function</li>
+        </ul>
+      </div>
+      <div class="desig-cell highlight">
+        <div class="desig-name green">→ Hi-Potential (Your Target)</div>
+        <ul class="desig-check">
+          <li class="met">High performer (A-rater)</li>
+          <li class="met">Versatility across boundaries</li>
+          <li class="met">Fast learner in new/expanded roles</li>
+          <li class="met">Aspiration to do more</li>
+          <li class="gap">1–2 specific roles identified for move</li>
+        </ul>
+      </div>
+      <div class="desig-cell">
+        <div class="desig-name">Well Placed</div>
+        <ul class="desig-check">
+          <li>Satisfactory (B)</li>
+          <li>No boundary-crossing versatility</li>
+          <li>Unlikely to move up in 1–2 years</li>
+          <li>Needs more development first</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:0.76rem;color:var(--muted);margin-top:0.5rem;">✓ = you already meet this · ○ = the remaining gap to Hi-Potential</p>
+  </div>
+
+  <!-- STRENGTHS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div>
+        <div class="section-title">CliftonStrengths × Career Strategy</div>
+        <div class="section-desc">Hover each strength to see how to deploy it for promotion. Top 10 from your 2018 report.</div>
+      </div>
+    </div>
+    <div class="strengths-grid">
+      <div class="strength-cell domain-rel">
+        <div class="s-num">01</div>
+        <div class="s-name">Harmony</div>
+        <div class="s-domain">Relationship Building</div>
+        <div class="s-insight">Your conflict-aversion is a consensus superpower. Use it in cross-functional stakeholder alignment — a critical Hi-Potential signal. Frame yourself as the person who gets warring teams to a decision.</div>
+      </div>
+      <div class="strength-cell domain-exec">
+        <div class="s-num">02</div>
+        <div class="s-name">Responsibility</div>
+        <div class="s-domain">Executing</div>
+        <div class="s-insight">You take full ownership — directors see this. Risk: you overcommit. Learn to delegate outcomes, not just tasks. The next level is making others accountable, not absorbing all accountability yourself.</div>
+      </div>
+      <div class="strength-cell domain-exec">
+        <div class="s-num">03</div>
+        <div class="s-name">Consistency</div>
+        <div class="s-domain">Executing</div>
+        <div class="s-insight">Your governance frameworks and policy standardisation are this in action. Lean into it when pitching promotion: "I built systems that outlast any individual." That's senior leader language.</div>
+      </div>
+      <div class="strength-cell domain-strat">
+        <div class="s-num">04</div>
+        <div class="s-name">Intellection</div>
+        <div class="s-domain">Strategic Thinking</div>
+        <div class="s-insight">You think deeply before speaking — but others may read this as disengaged. Fix: brief verbal "thinking aloud" in meetings. "Let me process that — my initial read is..." signals engagement and intelligence simultaneously.</div>
+      </div>
+      <div class="strength-cell domain-strat">
+        <div class="s-num">05</div>
+        <div class="s-name">Input</div>
+        <div class="s-domain">Strategic Thinking</div>
+        <div class="s-insight">You collect and synthesise information faster than peers. This is your IAM authority engine. Start writing short internal briefings or Confluence pages on governance trends — position yourself as the knowledge hub.</div>
+      </div>
+      <div class="strength-cell domain-rel">
+        <div class="s-num">06</div>
+        <div class="s-name">Relator</div>
+        <div class="s-domain">Relationship Building</div>
+        <div class="s-insight">Deep 1:1 trust is your currency. The risk: you invest heavily in your inner circle (Joseph, Jason) but may under-invest in breadth. For Hi-Potential, you need 3–4 more cross-org relationships at director level.</div>
+      </div>
+      <div class="strength-cell domain-strat">
+        <div class="s-num">07</div>
+        <div class="s-name">Learner</div>
+        <div class="s-domain">Strategic Thinking</div>
+        <div class="s-insight">Use this visibly. ITIL cert in progress — good. Consider adding a governance/security certification (CISM, CGEIT) that signals domain authority, not just operational competence.</div>
+      </div>
+      <div class="strength-cell domain-exec">
+        <div class="s-num">08</div>
+        <div class="s-name">Arranger</div>
+        <div class="s-domain">Executing</div>
+        <div class="s-insight">You optimise resource configuration instinctively. This is why the 27M laptop program ran ahead of schedule. Make sure decision-makers know you're the architect, not just the executor.</div>
+      </div>
+      <div class="strength-cell domain-rel">
+        <div class="s-num">09</div>
+        <div class="s-name">Developer</div>
+        <div class="s-domain">Relationship Building</div>
+        <div class="s-insight">You see potential in people before they see it themselves. This is a senior leader trait. Formalise it: identify 1–2 team members you're actively developing and name them in your promotion conversation.</div>
+      </div>
+      <div class="strength-cell domain-exec">
+        <div class="s-num">10</div>
+        <div class="s-name">Restorative</div>
+        <div class="s-domain">Executing</div>
+        <div class="s-insight">Problem-solving is your default mode. Watch the blind spot: you rush to fix before others feel heard. In executive settings, slow the diagnosis — ask "what outcome do you need?" before proposing solutions.</div>
+      </div>
+    </div>
+    <p style="font-size:0.72rem;color:var(--muted);margin-top:0.75rem;">Note: Strategic (#28) and Communication (#21) sit low in your profile — these are the exact gaps your reviews flag. They are manageable with deliberate practice, not rewiring.</p>
+  </div>
+
+  <!-- GAPS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div>
+        <div class="section-title">The Gaps (Unvarnished)</div>
+        <div class="section-desc">What's actually standing between you and the title</div>
+      </div>
+    </div>
+    <table class="gap-table">
+      <thead>
+        <tr>
+          <th>Gap</th>
+          <th>What it looks like now</th>
+          <th>What "closed" looks like</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="gap-badge critical">Critical</span><br>
+            Executive Communication
+          </td>
+          <td>Detailed, thorough, technically accurate — but slides need more visuals, less text. Reviews say "calibrate importance." You communicate at engineer level when the audience is director level.</td>
+          <td>One-page narratives. 3-bullet exec summaries. Visual governance maps. Every slide has one point. Sponsors can quote your ideas without needing your slides.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="gap-badge critical">Critical</span><br>
+            Domain Authority
+          </td>
+          <td>Highly respected internally. But you said yourself: "my IAM opinions may not carry as much weight as a security professional." That self-doubt is visible externally.</td>
+          <td>You are Sea's IAM/governance reference point. You present at a cross-functional forum. You have one external credential (CISM or equivalent). People tag you, not ask you.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="gap-badge high">High</span><br>
+            Breadth of Sponsorship
+          </td>
+          <td>3 strong sponsors, but all in your direct chain. No lateral or cross-business advocates yet.</td>
+          <td>1–2 directors from adjacent business units (Shopee, Garena, SeaMoney side) who have seen your work and would vouch for you in a calibration meeting you're not in.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="gap-badge high">High</span><br>
+            Identity Decoupling
+          </td>
+          <td>Progress-metric identity (salary bands, trajectory) creates subtle restlessness. Comparisons to doctors/high performers are still present. This can leak as impatience with peers.</td>
+          <td>You define success in contribution terms, not comparative terms. The 2029 gap year is your anchor — you already have an intrinsic north star. Use it more deliberately.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div>
+        <div class="section-title">Your Action Checklist</div>
+        <div class="section-desc">Personalised to your CV, strengths, and gaps. Tick as you go.</div>
+      </div>
+    </div>
+
+    <!-- Group A -->
+    <div class="cl-group">
+      <div class="cl-group-head" onclick="toggleCl(this)">
+        <h3>🎯 Establish Domain Authority</h3>
+        <span class="cl-badge" id="cbadge-0">0 / 4</span>
+      </div>
+      <div class="cl-items" id="cgroup-0">
+        <label class="cl-item" onclick="clToggle(this,0)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Earn one recognised security governance credential (CISM or CGEIT) within 12 months
+            <span class="why">Closes the "security professional" credibility gap you've named. ITIL is operational — CISM signals strategy.</span>
+            <span class="strength-link">↑ Learner + Input strengths</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,0)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Write and publish 2–3 internal governance briefings on IAM/PAM trends (Confluence, internal newsletter)
+            <span class="why">Input + Intellection strengths mean you already synthesise this — you just haven't made it visible. Position yourself as the knowledge hub.</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,0)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Present IAM/governance strategy at one cross-functional or group-level forum this half
+            <span class="why">Being seen by audiences outside your direct chain is the difference between "known" and "recognised."</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,0)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Define and own a "Sea IAM Standard" document — something that outlasts your role
+            <span class="why">Authority isn't just doing the work. It's creating the artefact people reference when you're not in the room.</span>
+            <span class="strength-link">↑ Consistency + Arranger strengths</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Group B -->
+    <div class="cl-group">
+      <div class="cl-group-head" onclick="toggleCl(this)">
+        <h3>📊 Master Executive Communication</h3>
+        <span class="cl-badge" id="cbadge-1">0 / 4</span>
+      </div>
+      <div class="cl-items" id="cgroup-1">
+        <label class="cl-item" onclick="clToggle(this,1)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Adopt the "1 slide, 1 message" rule for all director-level presentations
+            <span class="why">Your review flagged this directly. One action, one month to change the habit. Nothing else communicates executive readiness faster to Wee Han and Jason.</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,1)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Create a 1-page "Regional IT Health Snapshot" sent to directors monthly
+            <span class="why">Regular, concise executive communication builds a rhythm of visibility. Your Arranger + Consistency strengths make this natural.</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,1)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Before any director meeting: write the 3-bullet "so what" summary first, then build content around it
+            <span class="why">Reverses your current pattern (detail-first → conclusion). Forces you to think at executive altitude before descending into the weeds.</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,1)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Ask for one round of feedback from Joseph or Jason on a key presentation before sending
+            <span class="why">Your Relator strength means you build deep trust — use that trust for communication coaching, not just project support.</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Group C -->
+    <div class="cl-group">
+      <div class="cl-group-head" onclick="toggleCl(this)">
+        <h3>🤝 Expand Your Sponsor Network</h3>
+        <span class="cl-badge" id="cbadge-2">0 / 3</span>
+      </div>
+      <div class="cl-items" id="cgroup-2">
+        <label class="cl-item" onclick="clToggle(this,2)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Identify 1–2 directors in adjacent Sea business units (Shopee/Garena/SeaMoney tech) and find a cross-org reason to collaborate
+            <span class="why">Promotions are decided in calibration rooms you're not in. You need advocates who aren't in your direct reporting chain.</span>
+            <span class="strength-link">↑ Relator + Developer strengths — you build deep trust fast when given a reason</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,2)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Have an explicit "promotion intent" conversation with Jason Bay — not just Joseph
+            <span class="why">You have access to a Senior Director who already endorses you. Make the ask specific. "What would make you 100% confident advocating for my promotion in H1 2026?"</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,2)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Prepare a 1-page "promotion case" and share with your sponsors before the next cycle
+            <span class="why">Your sponsors need to articulate your case to others. Make it effortless for them — give them the talking points.</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Group D -->
+    <div class="cl-group">
+      <div class="cl-group-head" onclick="toggleCl(this)">
+        <h3>📈 Consolidate Next-Level Evidence</h3>
+        <span class="cl-badge" id="cbadge-3">0 / 4</span>
+      </div>
+      <div class="cl-items" id="cgroup-3">
+        <label class="cl-item" onclick="clToggle(this,3)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Build and maintain a "wins log" — updated fortnightly with quantified impact
+            <span class="why">You have exceptional delivery data (27M, 30k users, 95% rates) but rely on memory at review time. Document as you go.</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,3)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Formally name the 1–2 team members you're developing and include in your performance narrative
+            <span class="why">Developer strength in action + proof of senior leadership behaviour. "I'm growing X to take over Y" is a senior leader statement.</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,3)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Take ownership of one initiative outside your explicit remit this half
+            <span class="why">Hi-Potential means you operate beyond your job description. Choose something visible, with cross-org impact.</span>
+          </span>
+        </label>
+        <label class="cl-item" onclick="clToggle(this,3)">
+          <div class="cl-box"></div>
+          <span class="cl-text">Find out Sea's exact promotion cycle timing and get Joseph to formally flag you as a candidate at least 8 weeks before
+            <span class="why">Timing matters. Missing the cycle means waiting another 6–12 months. Passive candidates don't get promoted.</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="score-bar" style="margin-top:1.5rem;">
+      <div class="score-big" id="score-num">0 / 15</div>
+      <div class="score-label">Actions Completed</div>
+      <div class="score-msg" id="score-msg">Start working through your checklist. Every item builds your case.</div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div>
+        <div class="section-title">Your Roadmap to 2029</div>
+        <div class="section-desc">Anchored to your life design — not just the title</div>
+      </div>
+    </div>
+    <div class="tl" id="timeline">
+      <div class="tl-item">
+        <div class="tl-dot now">●</div>
+        <div class="tl-phase">Now · Q2–Q3 2025</div>
+        <div class="tl-title">Close the Communication Gap</div>
+        <div class="tl-body">
+          The single highest-leverage action. Adopt exec communication habits immediately — before your next director presentation. Ask Jason for feedback.
+          <ul>
+            <li>1-slide, 1-message rule begins <strong>this month</strong></li>
+            <li>Start your wins log today</li>
+            <li>Book an explicit promotion conversation with Joseph</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot soon">◆</div>
+        <div class="tl-phase">Q4 2025</div>
+        <div class="tl-title">Build Domain Authority</div>
+        <div class="tl-body">
+          Shift from "strong operator" to "Sea's IAM voice." Start CISM prep. Publish your first internal briefing. Present at one cross-functional forum.
+          <ul>
+            <li>CISM study plan locked in</li>
+            <li>Sea IAM Standard v1.0 drafted</li>
+            <li>Monthly exec snapshot cadence running</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot soon">◆</div>
+        <div class="tl-phase">Q1 2026</div>
+        <div class="tl-title">Make the Promotion Ask</div>
+        <div class="tl-body">
+          You'll have 6 months of compounded evidence and three directors who can articulate your case. Confirm cycle timing. Prepare your 1-page promotion case document.
+          <ul>
+            <li>Promotion case document shared with all 3 sponsors</li>
+            <li>Formally flagged as candidate by Joseph</li>
+            <li>CISM exam ideally complete or in final prep</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot later">○</div>
+        <div class="tl-phase">2027</div>
+        <div class="tl-title">Strategic Jump · 15–17k Base</div>
+        <div class="tl-body">
+          Whether at Sea or externally, by this point you're a <strong>named authority in IAM governance</strong> with a strong regional track record. Market rate follows credibility.
+          <ul>
+            <li>Consider external validation: conference talk, advisory board</li>
+            <li>Re-evaluate internal vs external move with full information</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot later">○</div>
+        <div class="tl-phase">2029</div>
+        <div class="tl-title">The Gap Year — Funded & Earned</div>
+        <div class="tl-body">
+          This is the north star. By then: property income supporting cashflow, career at a level where a return is easy, family memories that compound differently than salary. You've already designed this right.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// Animate signal bars
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('.signal-fill').forEach((fill, i) => {
+        const target = parseInt(fill.dataset.target);
+        fill.style.width = target + '%';
+        const valEl = document.getElementById('sv' + i);
+        let c = 0;
+        const step = target / 50;
+        const iv = setInterval(() => {
+          c = Math.min(c + step, target);
+          valEl.textContent = Math.round(c) + '%';
+          if (c >= target) clearInterval(iv);
+        }, 25);
+      });
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const sig = document.getElementById('signals');
+if (sig) observer.observe(sig);
+
+// Timeline intersection
+const tlObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.tl-item').forEach((el, i) => {
+  el.style.transitionDelay = (i * 0.12) + 's';
+  tlObs.observe(el);
+});
+
+// Checklist logic
+const clCounts = [0, 0, 0, 0];
+const clTotals = [4, 4, 3, 4];
+
+function clToggle(label, groupIdx) {
+  label.classList.toggle('done');
+  const checked = label.classList.contains('done');
+  clCounts[groupIdx] += checked ? 1 : -1;
+  document.getElementById('cbadge-' + groupIdx).textContent =
+    clCounts[groupIdx] + ' / ' + clTotals[groupIdx];
+  updateScore();
+}
+
+function updateScore() {
+  const total = clCounts.reduce((a, b) => a + b, 0);
+  document.getElementById('score-num').textContent = total + ' / 15';
+  const msgs = [
+    'Start working through your checklist. Every item builds your case.',
+    'Good start. The communication items have the highest near-term ROI.',
+    'Making real progress. Your sponsors can already see the shift.',
+    'Strong foundation. Time to have the explicit promotion conversation.',
+    'You\'re operating at next level. The ask is overdue — make it.',
+    'This is what Hi-Potential looks like in action. 2026 is yours.',
+  ];
+  const idx = Math.min(Math.floor(total / 3), msgs.length - 1);
+  document.getElementById('score-msg').textContent = msgs[idx];
+}
+
+function toggleCl(header) {
+  const items = header.nextElementSibling;
+  items.style.display = items.style.display === 'none' ? '' : 'none';
+}
+</script>
+</body>
+</html>
